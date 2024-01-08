@@ -1,10 +1,6 @@
 import '@/styles/global.css';
 import Counter from './counter';
 
-export const metadata = {
-  title: 'App Router',
-};
-
 export default function Page() {
   return (
     <div className="container mx-auto">
