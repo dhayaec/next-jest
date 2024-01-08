@@ -1,8 +1,9 @@
 /**
  * @jest-environment jsdom
  */
-import Home from '@/pages/home/index';
+
 import { render } from '@testing-library/react';
+import Home from '../pages/home';
 
 it('renders homepage unchanged', () => {
   const { container } = render(<Home />);

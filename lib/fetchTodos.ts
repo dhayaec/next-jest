@@ -10,7 +10,7 @@ export type Todo = {
 
 export const fetchTodos = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/todos`);
+    const response = await axios.get(`${BASE_URL}/todos?_limit=3`);
     return response.data as Todo[];
   } catch (error) {
     if (error instanceof Error) console.log(error.message);
