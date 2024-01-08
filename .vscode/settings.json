@@ -43,6 +43,7 @@
       "tailwindcss",
       "tailwindui",
       "testid",
+      "todos",
       "vercel"
     ],
     "[xml]": {
