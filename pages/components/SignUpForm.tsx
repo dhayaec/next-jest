@@ -33,6 +33,7 @@ const SignUpForm = () => {
 
   return (
     <div className="max-w-md mx-auto mt-8">
+      <h2 data-testid="signUp">Sign Up</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Full Name */}
         <div className="mb-4">
@@ -48,6 +49,7 @@ const SignUpForm = () => {
             }`}
             type="text"
             id="fullName"
+            data-testid="fullName"
             {...register('fullName', { required: 'Full Name is required' })}
           />
           {errors.fullName && (
@@ -71,6 +73,7 @@ const SignUpForm = () => {
             }`}
             type="email"
             id="email"
+            data-testid="email"
             {...register('email', {
               required: 'Email is required',
               pattern: {
@@ -100,6 +103,7 @@ const SignUpForm = () => {
             }`}
             type="password"
             id="password"
+            data-testid="password"
             {...register('password', {
               required: 'Password is required',
               minLength: {
@@ -129,6 +133,7 @@ const SignUpForm = () => {
             }`}
             type="password"
             id="confirmPassword"
+            data-testid="confirmPassword"
             {...register('confirmPassword', {
               required: 'Confirm Password is required',
               validate: validateConfirmPassword,
