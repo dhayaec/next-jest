@@ -23,6 +23,14 @@ const customJestConfig = {
     customExportConditions: [''],
   },
   moduleDirectories: ['node_modules', 'src'],
+  coverageThreshold: {
+    global: {
+      branches: 95,
+      functions: 95,
+      lines: 95,
+      statements: 95,
+    },
+  },
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
