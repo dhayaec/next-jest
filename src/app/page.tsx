@@ -1,4 +1,4 @@
-import ExampleForm from '../pages/components/SignUpForm';
+import SignUpForm from '@/components/SignUpForm';
 import '../styles/global.css';
 import Counter from './counter';
 
@@ -9,7 +9,7 @@ export default function Page() {
         Hello world!
       </h1>
       <Counter />
-      <ExampleForm />
+      <SignUpForm />
     </div>
   );
 }
