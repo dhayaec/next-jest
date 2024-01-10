@@ -4,3 +4,7 @@ export const addAll = (numbers: number[]): number => {
   }
   return numbers[0] + addAll(numbers.slice(1));
 };
+
+export const reverseStr = (str: string) => {
+  return str.split('').reverse().join('');
+};
