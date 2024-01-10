@@ -45,8 +45,8 @@
       "eslint --fix",
       "npm run test:cover"
     ],
-    "*.{js,ts,jsx,tsx,mdx,json}": [
-      "prettier --fix"
+    "*.{json}": [
+      "prettier . --write"
     ]
   }
 }
