@@ -40,6 +40,7 @@ const SignUpForm = () => {
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="fullName"
+            data-testid="fullNameLabel"
           >
             Full Name
           </label>
@@ -53,7 +54,10 @@ const SignUpForm = () => {
             {...register('fullName', { required: 'Full Name is required' })}
           />
           {errors.fullName && (
-            <p className="text-red-500 text-xs italic">
+            <p
+              data-testid="fullNameError"
+              className="text-red-500 text-xs italic"
+            >
               {errors.fullName.message as any}
             </p>
           )}
@@ -64,6 +68,7 @@ const SignUpForm = () => {
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="email"
+            data-testid="emailLabel"
           >
             Email
           </label>
@@ -83,7 +88,7 @@ const SignUpForm = () => {
             })}
           />
           {errors.email && (
-            <p className="text-red-500 text-xs italic">
+            <p data-testid="emailError" className="text-red-500 text-xs italic">
               {errors.email.message as any}
             </p>
           )}
@@ -94,6 +99,7 @@ const SignUpForm = () => {
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="password"
+            data-testid="passwordLabel"
           >
             Password
           </label>
@@ -113,7 +119,10 @@ const SignUpForm = () => {
             })}
           />
           {errors.password && (
-            <p className="text-red-500 text-xs italic">
+            <p
+              data-testid="passwordError"
+              className="text-red-500 text-xs italic"
+            >
               {errors.password.message as any}
             </p>
           )}
@@ -124,6 +133,7 @@ const SignUpForm = () => {
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="confirmPassword"
+            data-testid="confirmPasswordLabel"
           >
             Confirm Password
           </label>
@@ -140,7 +150,10 @@ const SignUpForm = () => {
             })}
           />
           {errors.confirmPassword && (
-            <p className="text-red-500 text-xs italic">
+            <p
+              data-testid="confirmPasswordError"
+              className="text-red-500 text-xs italic"
+            >
               {errors.confirmPassword.message as any}
             </p>
           )}
@@ -151,6 +164,7 @@ const SignUpForm = () => {
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
+            data-testid="signUpButton"
           >
             Sign Up
           </button>
