@@ -28,3 +28,15 @@ export const quickSort = (arr: number[]): number[] => {
 
   return [...quickSort(left), pivot, ...quickSort(right)];
 };
+
+export function* simpleGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+export function* lazyRange(start: number, end: number) {
+  for (let i = start; i < end; i++) {
+    yield i;
+  }
+}

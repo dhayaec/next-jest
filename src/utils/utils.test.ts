@@ -1,4 +1,10 @@
-import { addAll, quickSort, reverseStr } from './utils';
+import {
+  addAll,
+  lazyRange,
+  quickSort,
+  reverseStr,
+  simpleGenerator,
+} from './utils';
 
 describe('utils', () => {
   test('addAll should add all numbers', () => {
@@ -47,5 +53,25 @@ describe('QuickSort', () => {
     );
     const sortedArray = quickSort(unsortedArray);
     expect(sortedArray).toEqual([...unsortedArray].sort((a, b) => a - b));
+  });
+});
+
+describe('simpleGenerator', () => {
+  it('should generate values in sequence', () => {
+    const generator = simpleGenerator();
+
+    expect(generator.next().value).toBe(1);
+    expect(generator.next().value).toBe(2);
+    expect(generator.next().value).toBe(3);
+    expect(generator.next().value).toBeUndefined();
+  });
+});
+
+describe('lazyRange', () => {
+  it('should generate values in the specified range', () => {
+    const generator = lazyRange(1, 5);
+    const result = Array.from(generator);
+
+    expect(result).toEqual([1, 2, 3, 4]);
   });
 });
